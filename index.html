@@ -3,130 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUET ECE | 1-1 Hub</title>
-    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <title>KUET ECE Materials Hub</title>
+    <meta name="description" content="A centralized collection of study materials for KUET Electronics and Communication Engineering.">
+    <meta property="og:title" content="KUET ECE Materials Hub">
+    <meta property="og:description" content="Access lecture notes, books, and question banks for KUET ECE.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#3b82f6">
+    <link rel="icon" href="assets/logo.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">
+        <a href="index.html" class="logo">
             <i class="fa-solid fa-microchip"></i>
             KUET <span>ECE</span>
-        </div>
-        <nav>
-            <span style="color: var(--text-muted); font-size: 0.9rem;">1st Year 1st Semester</span>
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode">
-                <i class="fa-solid fa-sun"></i>
-            </button>
+        </a>
+        <nav class="main-nav">
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/semester-1-1.html">Semester 1-1</a>
+                <a href="pages/semester-1-2.html">Semester 1-2</a>
+                <a href="pages/semester-2-1.html">Semester 2-1</a>
+                <a href="pages/semester-2-2.html">Semester 2-2</a>
+                <a href="pages/semester-3-1.html">Semester 3-1</a>
+                <a href="pages/semester-3-2.html">Semester 3-2</a>
+                <a href="pages/semester-4-1.html">Semester 4-1</a>
+                <a href="pages/semester-4-2.html">Semester 4-2</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="user-badge"><i class="fa-solid fa-user-graduate"></i> Batch 2k24</div>
-            <h1>Academic <span class="highlight">Resources</span> Hub</h1>
-            <p>Access all detailed lecture notes, books, and question banks for 1st Year 1st Semester in one organized space.</p>
+        <section class="hero hub-hero">
+            <h1>KUET ECE <span class="highlight">Materials Hub</span></h1>
+            <p>A centralized collection of study materials for all 8 semesters of KUET Electronics and Communication Engineering.</p>
         </section>
 
-        <section class="subject-grid">
-            <!-- ECE 1109 -->
-            <div class="card" onclick="openViewer('ECE 1109 - Intro to ECE', 'ece')">
-                <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
-                <h3>ECE 1109</h3>
-                <p>Introduction to ECE</p>
-                <div class="tags">
-                    <span class="tag">Electronics</span>
-                    <span class="tag">Communication</span>
-                    <span class="tag">Lab: ECE 1110</span>
+        <section class="hub-grid">
+            <!-- Semester 1-1 -->
+            <a href="pages/semester-1-1.html" class="hub-card">
+                <div class="hub-card-header">
+                    <div class="hub-card-icon"><i class="fa-solid fa-book"></i></div>
+                    <span class="status-badge available">Available</span>
                 </div>
-            </div>
+                <h3>1st Year 1st Semester</h3>
+                <p>Access notes, books, and question banks.</p>
+            </a>
 
-            <!-- EEE 1109 -->
-            <div class="card" onclick="openViewer('EEE 1109 - Basic Electrical', 'eee')">
-                <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
-                <h3>EEE 1109</h3>
-                <p>Basic Electrical Engineering</p>
-                <div class="tags">
-                    <span class="tag">AC/DC Circuits</span>
-                    <span class="tag">Magnetic Circuits</span>
-                    <span class="tag">Lab: EEE 1110</span>
+            <!-- Semester 1-2 -->
+            <a href="pages/semester-1-2.html" class="hub-card">
+                <div class="hub-card-header">
+                    <div class="hub-card-icon"><i class="fa-solid fa-vial"></i></div>
+                    <span class="status-badge upcoming">Coming Soon</span>
                 </div>
-            </div>
+                <h3>1st Year 2nd Semester</h3>
+                <p>Materials for this semester will be uploaded soon.</p>
+            </a>
 
-            <!-- Math 1109 -->
-            <div class="card" onclick="openViewer('MATH 1109 - Calculus', 'math')">
-                <div class="card-icon"><i class="fa-solid fa-square-root-variable"></i></div>
-                <h3>MATH 1109</h3>
-                <p>Differential & Integral Calculus</p>
-                <div class="tags">
-                    <span class="tag">Calculus</span>
-                    <span class="tag">Differentiation</span>
-                    <span class="tag">Integration</span>
+            <!-- Semester 2-1 -->
+            <a href="pages/semester-2-1.html" class="hub-card">
+                <div class="hub-card-header">
+                    <div class="hub-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <span class="status-badge upcoming">Coming Soon</span>
                 </div>
-            </div>
+                <h3>2nd Year 1st Semester</h3>
+                <p>Materials for this semester will be uploaded soon.</p>
+            </a>
 
-            <!-- Phy 1109 -->
-            <div class="card" onclick="openViewer('PH 1109 - Physics', 'phy')">
-                <div class="card-icon"><i class="fa-solid fa-atom"></i></div>
-                <h3>PH 1109</h3>
-                <p>Physics</p>
-                <div class="tags">
-                    <span class="tag">Modern Physics</span>
-                    <span class="tag">Waves and Oscillations</span>
-                    <span class="tag">Lab: PH 1110</span>
+            <!-- Semester 2-2 -->
+            <a href="pages/semester-2-2.html" class="hub-card">
+                <div class="hub-card-header">
+                    <div class="hub-card-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <span class="status-badge upcoming">Coming Soon</span>
                 </div>
-            </div>
+                <h3>2nd Year 2nd Semester</h3>
+                <p>Materials for this semester will be uploaded soon.</p>
+            </a>
 
-            <!-- Hum 1109 -->
-            <div class="card" onclick="openViewer('HUM 1109 - Technical English', 'hum')">
-                <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
-                <h3>HUM 1109</h3>
-                <p>Technical English</p>
-                <div class="tags">
-                    <span class="tag">Writing</span>
-                    <span class="tag">Grammar</span>
-                    <span class="tag">Speaking</span>
+            <!-- Semester 3-1 -->
+            <a href="pages/semester-3-1.html" class="hub-card">
+                <div class="hub-card-header">
+                    <div class="hub-card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <span class="status-badge upcoming">Coming Soon</span>
                 </div>
-            </div>
+                <h3>3rd Year 1st Semester</h3>
+                <p>Materials for this semester will be uploaded soon.</p>
+            </a>
+
+            <!-- Semester 3-2 -->
+            <a href="pages/semester-3-2.html" class="hub-card">
+                <div class="hub-card-header">
+                    <div class="hub-card-icon"><i class="fa-solid fa-tower-cell"></i></div>
+                    <span class="status-badge upcoming">Coming Soon</span>
+                </div>
+                <h3>3rd Year 2nd Semester</h3>
+                <p>Materials for this semester will be uploaded soon.</p>
+            </a>
+
+            <!-- Semester 4-1 -->
+            <a href="pages/semester-4-1.html" class="hub-card">
+                <div class="hub-card-header">
+                    <div class="hub-card-icon"><i class="fa-solid fa-satellite"></i></div>
+                    <span class="status-badge upcoming">Coming Soon</span>
+                </div>
+                <h3>4th Year 1st Semester</h3>
+                <p>Materials for this semester will be uploaded soon.</p>
+            </a>
+
+            <!-- Semester 4-2 -->
+            <a href="pages/semester-4-2.html" class="hub-card">
+                <div class="hub-card-header">
+                    <div class="hub-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <span class="status-badge upcoming">Coming Soon</span>
+                </div>
+                <h3>4th Year 2nd Semester</h3>
+                <p>Materials for this semester will be uploaded soon.</p>
+            </a>
         </section>
     </main>
-
-    <div class="resource-viewer" id="viewerModal">
-        <div class="viewer-content">
-            <div class="viewer-header">
-                <h2 id="modalTitle">Subject Name</h2>
-                <button class="close-btn" onclick="closeViewer()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            
-            <div class="viewer-tabs">
-                <button class="tab-btn active" id="notesBtn" onclick="switchTab('notes')">Lecture Notes</button>
-                <button class="tab-btn" id="booksBtn" onclick="switchTab('books')">Books</button>
-                <button class="tab-btn" onclick="switchTab('questions')">Question Bank</button>
-                <button class="tab-btn" id="slidesBtn" onclick="switchTab('slides')">Slides</button>
-                <button class="tab-btn" id="notes2k22Btn" onclick="switchTab('notes2k22')">2k22 Notes</button>
-                <button class="tab-btn" id="labManualsBtn" onclick="switchTab('labManuals')">Lab Manuals</button>
-                <button class="tab-btn" id="writingTabBtn" onclick="switchTab('writing')">Writing Part</button>
-                <button class="tab-btn" id="labTabBtn" onclick="switchTab('labs')">Labs (1110)</button>
-            </div>
-            <iframe id="driveFrame" class="drive-frame" src="about:blank"></iframe>
-            
-        </div>
-    </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
                 <i class="fa-solid fa-microchip"></i>
-                <span>KUET ECE</span>
+                <span>KUET ECE Materials Hub</span>
             </div>
             
             <div class="footer-links">
-                <p>Built for Batch 2k25</p>
+                <p>A Complete Repository</p>
                 <span class="separator"></span>
                 <p>Designed by <a href="https://facebook.com/kankonnil" target="_blank" class="designer-link">Kankon Mondal <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
             </div>
@@ -137,6 +154,9 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 </body>
 </html>

@@ -207,11 +207,13 @@ function loadDriveContent() {
 }
 
 // Close on outside click
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    closeViewer();
-  }
-});
+if (modal) {
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            closeViewer();
+        }
+    });
+}
 
 // Theme Toggle Logic
 function toggleTheme() {
@@ -225,7 +227,7 @@ function toggleTheme() {
     updateThemeIcon(targetTheme);
     
     // Refresh drive content inversion if a folder is loaded
-    if (modal.classList.contains("active")) {
+    if (modal && modal.classList.contains("active")) {
         loadDriveContent();
     }
 }
@@ -245,3 +247,38 @@ function updateThemeIcon(theme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 })();
+
+// Mobile Menu Logic
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
+// Scroll Events
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    
+    if (header) {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+    
+    if (scrollTopBtn) {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
