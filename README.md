@@ -1,26 +1,25 @@
-# Academic Resource Hub 🎓
-
-### KUET ECE | 1st Year 1st Semester
+# KUET ECE Materials Hub 🎓
 
 ![Project Badge](https://img.shields.io/badge/KUET-ECE-blue) ![Batch](https://img.shields.io/badge/Batch-2k24%2F2k25-green) ![Status](https://img.shields.io/badge/Status-Active-success)
 
-**Academic Resource Nexus** is a centralized, modern web platform designed specifically for students of **Khulna University of Engineering & Technology (KUET)**, Department of **Electronics & Communication Engineering (ECE)**. It serves as a one-stop digital library for all academic materials required in the Level 1 Term 1 semester.
+**KUET ECE Materials Hub** is a centralized, modern web platform designed specifically for students of **Khulna University of Engineering & Technology (KUET)**, Department of **Electronics & Communication Engineering (ECE)**. It serves as a comprehensive digital library, organizing academic materials for all 8 semesters of the undergraduate program.
 
 ---
 
 ## 🌟 Key Features
 
-- ** centralized Resource Management**: Instant access to Lecture Notes, Books, Question Banks, Lab Manuals, and Slides for all 5 core subjects.
+- **📚 Multi-Semester Architecture**: A central Hub page linking to dedicated spaces for all 8 semesters (from 1-1 to 4-2).
 - **📂 Seamless Google Drive Integration**: Directly embeds curated Google Drive folders for viewing files without leaving the app.
 - **🌗 Dynamic Theme System**: Beautiful **Dark Mode** (default) for late-night study sessions and a crisp **Light Mode** for daytime clarity.
-- **⚡ Modern UI/UX**: Built with a glassmorphism aesthetic, smooth micro-interactions, and a responsive grid layout.
+- **⚡ Premium UI/UX**: Built with a glassmorphism aesthetic, staggered grid animations, smooth scroll-to-top functionality, and an anchored global hamburger menu.
 - **📱 Fully Responsive**: Optimized experience across Desktops, Tablets, and Mobile devices.
+- **🌐 SEO & Social Ready**: Integrated OpenGraph (OG) tags for beautiful rich-link previews when shared on WhatsApp, Messenger, or Facebook.
 
 ---
 
-## 📚 Subject Coverage
+## 📚 Subject Coverage (Semester 1-1)
 
-The hub organizes resources for the following subjects:
+While the Hub is built for all semesters, **Semester 1-1** is currently fully populated with resources for the following subjects:
 
 | Code          | Subject Name                     | Resources Available                            |
 | :------------ | :------------------------------- | :--------------------------------------------- |
@@ -30,13 +29,15 @@ The hub organizes resources for the following subjects:
 | **PH 1109**   | Physics                          | Notes, Books, Questions, Slides, Labs, Manuals |
 | **HUM 1109**  | Technical English                | Question Bank, Writing Part                    |
 
+*(Note: Other semester pages are structurally ready and marked as "Coming Soon" until their respective materials are uploaded.)*
+
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic structure.
-- **CSS3**: Custom variables, Flexbox/Grid, Glassmorphism effects, and Media Queries (No frameworks used).
-- **JavaScript (ES6+)**: Dynamic DOM manipulation, Theme logic, and Drive embed handling.
+- **HTML5**: Semantic structure across multiple pages (`index.html` and `pages/semester-*.html`).
+- **CSS3**: Custom variables, Flexbox/Grid, Glassmorphism effects, keyframe animations, and Media Queries (No frameworks used).
+- **JavaScript (ES6+)**: Dynamic DOM manipulation, scroll event listeners, Theme logic, and Drive embed handling.
 - **Font Awesome**: Iconography.
 - **Google Fonts**: Inter & Outfit typefaces.
 
@@ -48,18 +49,25 @@ To run this project locally or update resources:
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/your-username/academic-resource-nexus.git
+    git clone https://github.com/KankonNil007/KUET-ECE-1-1.git
     ```
-2.  **Open `index.html`** in any modern web browser.
+2.  **Open `index.html`** in any modern web browser to access the main Hub.
+
+### Directory Structure
+- `/index.html`: The main Hub homepage.
+- `/pages/`: Contains all 8 individual semester pages.
+- `/css/`: Global stylesheets (`style.css`).
+- `/js/`: Global scripts (`script.js`).
+- `/assets/`: Icons and images.
 
 ### Updating Drive Links
 
-All resource links are managed in the `script.js` configuration object. To add or update a folder:
+All resource links are managed in the `js/script.js` configuration object. To add or update a folder:
 
 1.  Open the folder in Google Drive.
 2.  Ensure Sharing is set to **"Anyone with the link"**.
 3.  Copy the Folder ID from the URL (the string after `folders/`).
-4.  Paste it into the corresponding field in `script.js`:
+4.  Paste it into the corresponding field in `js/script.js`:
     ```javascript
     const resources = {
       ece: {
@@ -88,4 +96,4 @@ The application saves the user's theme preference (Light/Dark) in the browser's 
 
 ---
 
-&copy; 2024 Academic Resource Hub. All custom assets and code are free to use for educational purposes.
+&copy; 2024 KUET ECE Materials Hub. All custom assets and code are free to use for educational purposes.
