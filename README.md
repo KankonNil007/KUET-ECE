@@ -49,7 +49,7 @@ To run this project locally or update resources:
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/KankonNil007/KUET-ECE-1-1.git
+    git clone https://github.com/KankonNil007/KUET-ECE.git
     ```
 2.  **Open `index.html`** in any modern web browser to access the main Hub.
 
