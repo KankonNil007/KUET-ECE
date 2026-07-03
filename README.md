@@ -9,6 +9,7 @@
 ## 🌟 Key Features
 
 - **📚 Multi-Semester Architecture**: A central Hub page linking to dedicated spaces for all 8 semesters (from 1-1 to 4-2).
+- **⏱️ Live Countdown Timers**: Track the availability of upcoming semesters with dynamic, real-time countdown clocks.
 - **📂 Seamless Google Drive Integration**: Directly embeds curated Google Drive folders for viewing files without leaving the app.
 - **🌗 Dynamic Theme System**: Beautiful **Dark Mode** (default) for late-night study sessions and a crisp **Light Mode** for daytime clarity.
 - **⚡ Premium UI/UX**: Built with a glassmorphism aesthetic, staggered grid animations, smooth scroll-to-top functionality, and an anchored global hamburger menu.
@@ -17,10 +18,11 @@
 
 ---
 
-## 📚 Subject Coverage (Semester 1-1)
+## 📚 Subject Coverage
 
-While the Hub is built for all semesters, **Semester 1-1** is currently fully populated with resources for the following subjects:
+Currently, the Hub is populated with organized resource hubs for the following semesters:
 
+### Semester 1-1
 | Code          | Subject Name                     | Resources Available                            |
 | :------------ | :------------------------------- | :--------------------------------------------- |
 | **ECE 1109**  | Introduction to ECE              | Notes, Books, Questions, Slides, Lab Manuals   |
@@ -29,7 +31,17 @@ While the Hub is built for all semesters, **Semester 1-1** is currently fully po
 | **PH 1109**   | Physics                          | Notes, Books, Questions, Slides, Labs, Manuals |
 | **HUM 1109**  | Technical English                | Question Bank, Writing Part                    |
 
-*(Note: Other semester pages are structurally ready and marked as "Coming Soon" until their respective materials are uploaded.)*
+### Semester 1-2
+| Code          | Subject Name                     | Resources Available                            |
+| :------------ | :------------------------------- | :--------------------------------------------- |
+| **ECE 1205**  | Science of Engineering Materials | Notes, Books, Questions, Slides                |
+| **ECE 1209**  | Analog Electronics - I           | Notes, Books, Questions, Slides, Labs, Manuals |
+| **CH 1209**   | Chemistry                        | Notes, Books, Questions, Slides, Labs, Manuals |
+| **MATH 1209** | Co-ordinate Geometry & Diff. Eq. | Notes, Books, Questions                        |
+| **CSE 1209**  | Computer Fundamentals & Prog.    | Notes, Books, Questions, Slides, Labs, Manuals |
+| **HUM 1210**  | Technical English Laboratory     | Question Bank                                  |
+
+*(Note: Future semesters are structurally ready and equipped with live countdown timers until their respective materials become available.)*
 
 ---
 
@@ -37,7 +49,7 @@ While the Hub is built for all semesters, **Semester 1-1** is currently fully po
 
 - **HTML5**: Semantic structure across multiple pages (`index.html` and `pages/semester-*.html`).
 - **CSS3**: Custom variables, Flexbox/Grid, Glassmorphism effects, keyframe animations, and Media Queries (No frameworks used).
-- **JavaScript (ES6+)**: Dynamic DOM manipulation, scroll event listeners, Theme logic, and Drive embed handling.
+- **JavaScript (ES6+)**: Dynamic DOM manipulation, scroll event listeners, Theme logic, Live Countdowns, and Drive embed handling.
 - **Font Awesome**: Iconography.
 - **Google Fonts**: Inter & Outfit typefaces.
 
@@ -49,7 +61,7 @@ To run this project locally or update resources:
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/KankonNil007/KUET-ECE.git
+    git clone https://github.com/KankonNil007/KUET-ECE-1-1.git
     ```
 2.  **Open `index.html`** in any modern web browser to access the main Hub.
 
@@ -57,20 +69,22 @@ To run this project locally or update resources:
 - `/index.html`: The main Hub homepage.
 - `/pages/`: Contains all 8 individual semester pages.
 - `/css/`: Global stylesheets (`style.css`).
-- `/js/`: Global scripts (`script.js`).
-- `/assets/`: Icons and images.
+- `/js/`: Scripts specific to managing configurations per semester (e.g., `script.js` for 1-1, `script-1-2.js` for 1-2).
+- `/assets/`: Icons and images, including the standard `favicon.ico`.
 
 ### Updating Drive Links
 
-All resource links are managed in the `js/script.js` configuration object. To add or update a folder:
+Each active semester has a dedicated JavaScript file in the `/js/` directory that manages its specific resource links.
+
+To add or update a folder:
 
 1.  Open the folder in Google Drive.
 2.  Ensure Sharing is set to **"Anyone with the link"**.
 3.  Copy the Folder ID from the URL (the string after `folders/`).
-4.  Paste it into the corresponding field in `js/script.js`:
+4.  Paste it into the corresponding field in the relevant configuration file (e.g., `js/script-1-2.js`):
     ```javascript
     const resources = {
-      ece: {
+      ece1205: {
         notes: "NEW_FOLDER_ID_HERE",
         // ...
       },
