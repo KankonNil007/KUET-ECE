@@ -1,59 +1,63 @@
 
 
 const resources = {
-  ece: {
-    notes: "10HOfn8yuccuc6KhNbn-5Zm5dmxJED30O",
-    books: "1gBwKKeMB9LNghbLdePfVyAcPdwjwfhGJ",
-    questions: "1RibDU3TQ3-In0kxBCJcDBUNLnesH3Flp",
-    slides: "105objX2McdhsymhoNSGq-fSga1O_Jk3P",
-    labs: "1W4e8dToos0QSQAhcfuGF4kU7fdpH66fS", // ECE 1110
-    notes2k22: "14i3wSgpWKY-sG2dLXCYNRfcVQ9tlwBR5",
-    labManuals: "1udjE3J_Xx4S1KlSNRpry3qD6VZUluPQ1",
-    writing: null,
-  },
-  eee: {
-    notes: "1o4wEulpUnctitJB5543unEMZzUBL80f0",
-    books: "1B6DpfbCesK4nvEWCZ-olv-AibzUxd0T4",
-    questions: "1od4vziNaJ_5KgPe4R5RG7KOg5f4ZsCAF",
-    slides: null,
-    labs: "1EmM1G0raxCAkgCwNZPbZIkV9uy_O2SHa", // EEE 1110
-    notes2k22: "1eBZKTgK_bRez5VOsYCokNlgbwWeyfO4N",
+  ece1205: {
+    notes: "1d6v03Gn487dd5DHBBoFftTW43c2IzXg9",
+    books: "1P5EbK-43cmEkrYqAiPV0ooaGdKS6xA6a",
+    questions: "1o0HnJ8VWZop7p3TsEZ79IfiDV0u5FECY",
+    slides: "1vRXdzmWeDcp8yQcjvYwfmU2rqt0wzpPJ",
+    labs: null,
     labManuals: null,
     writing: null,
   },
-  math: {
-    notes: "1nhdHwb6QhugakuaPQQIr-Qj5I7d-U3kE",
-    books: "1h4GXPJryYK8n36c3MvwqDSqrVdf0ddgc",
-    questions: "1Nj4QBgEZML4uM5js6yImm5Es50P2Izov",
+  ece1209: {
+    notes: "1S82cCQufJzZloHJuUy7jDQ0OEjtTPQJy",
+    books: "1v3z29bpV-xFTawHO2vsEZLDduAnBLs14",
+    questions: "1ZLSuf7N0IlWDB9tLsC-YADL2rrC17FSx",
+    slides: "1XuMZXAJsdgmOuuDmDVXB68wgNzcZTV1J",
+    labs: "12zUsV7bIbcgz8tv_E0kli70s3yiUiyB2", // ECE 1210
+    labManuals: "1PozjUZt3XdhWs_EA4ao9VGHwJXn0GXkq",
+    writing: null,
+  },
+  ch1209: {
+    notes: "1vGIR2jBdRRF57wR4QqgLbwAWVRq7xRGN",
+    books: "10pf69wU9xEn6RE39aUktWXKUWJnVvsj1",
+    questions: "18TYQbUqyLPcQjcWd9oR7MamcSMbjiWUe",
+    slides: "1AeP6mo2a-OOqtv6ODak2yIFVfun0tuQQ",
+    labs: "16TPRU0-y7UyDcdqjwZk60G9Uau_bFM5n", // CH 1210
+    labManuals: "16cR8Gb3y_eXmkuSCkKd1pp9ZNo_TqLPf",
+    writing: null,
+  },
+  math1209: {
+    notes: "18vW4ULdjYsF3_GHfekF2llhmUAhQl0C5",
+    books: "1bnyhTmLc-rlgctIymk2IGu4oB1hCej_J",
+    questions: "18U26paiKANgYqu7P6AsDVr3yXACIv4kJ",
     slides: null,
-    labs: null, // No Lab
-    notes2k22: null,
+    labs: null, 
     labManuals: null,
     writing: null,
   },
-  phy: {
-    notes: "12h5EHerXr1AjHq5FIEJVP_wUmTxeYQN7",
-    books: "1ocVaP2R6K9c7TV8iaNY6i5MVZtCBUrMz",
-    questions: "1SZpq5KkxifhHU2jDQ_7j_hdVxS_yyDkC",
-    slides: "1FP8SQuEO1Z7swrFsFSE9NpM9wKFJtUBH",
-    labs: "14jeAmUgUkwnFknl6TbuBxzys9vR7OLN7", // PH 1110
-    notes2k22: null,
-    labManuals: "1sQsJTesBEngvKFbTfwd2CB9Opf3Krp7c",
+  cse1209: {
+    notes: null,
+    books: "1XtCCgOSqR62Dr42ypKYatx973w14d9kJ",
+    questions: "15Q34soh4WezaqHdBGR0CcVTAK2GwyKur",
+    slides: "1bi7HxWBK4mVJSjPJSAmEP0mQvxEt7AP6",
+    labs: "1TAPTpzZsmAFymS527B48N9rb4Y5u5JoI", // CSE 1210
+    labManuals: "1iKJ8oAVSDFIOVSzYk4ww0yiu_lXhV2iP",
     writing: null,
   },
-  hum: {
+  hum1210: {
     notes: null,
     books: null,
-    questions: "1tjWXIKbvz4LZTE0cFD8hzAkuTNKKKMkD",
+    questions: "1D1pCRfRrZmuyaFv_lJGeK1iCgCLfgfaQ",
     slides: null,
-    labs: null, // No Lab
-    notes2k22: null,
+    labs: null,
     labManuals: null,
-    writing: "1NegvIVhSClRTIA8oAAni24zfTfeY-Ig4",
+    writing: null,
   },
 };
 
-let currentSubject = "ece";
+let currentSubject = "ece1205";
 let currentTab = "notes";
 
 const modal = document.getElementById("viewerModal");
@@ -61,7 +65,6 @@ const modalTitle = document.getElementById("modalTitle");
 const driveFrame = document.getElementById("driveFrame");
 const tabBtns = document.querySelectorAll(".tab-btn");
 const labTabBtn = document.getElementById("labTabBtn");
-const notes2k22Btn = document.getElementById("notes2k22Btn");
 const labManualsBtn = document.getElementById("labManualsBtn");
 const slidesBtn = document.getElementById("slidesBtn");
 const writingTabBtn = document.getElementById("writingTabBtn");
@@ -98,13 +101,6 @@ function openViewer(title, subjectKey) {
       labTabBtn.style.display = "block";
   } else {
       labTabBtn.style.display = "none";
-  }
-
-  // Show/Hide 2k22 Notes
-  if (resources[subjectKey].notes2k22) {
-      notes2k22Btn.style.display = "block";
-  } else {
-      notes2k22Btn.style.display = "none";
   }
 
   // Show/Hide Lab Manuals
@@ -281,34 +277,4 @@ function scrollToTop() {
         top: 0,
         behavior: 'smooth'
     });
-}
-
-// Countdown Logic
-function updateCountdowns() {
-    const countdownElements = document.querySelectorAll('.countdown');
-    const now = new Date().getTime();
-
-    countdownElements.forEach(el => {
-        const targetDate = new Date(el.getAttribute('data-date')).getTime();
-        const distance = targetDate - now;
-
-        if (distance < 0) {
-            el.innerHTML = "Available soon";
-            el.classList.remove('countdown', 'upcoming');
-            el.classList.add('available');
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        el.innerHTML = `In ${days}d ${hours}h ${minutes}m ${seconds}s`;
-    });
-}
-
-if (document.querySelectorAll('.countdown').length > 0) {
-    updateCountdowns();
-    setInterval(updateCountdowns, 1000);
 }

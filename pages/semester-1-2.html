@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semester 1-2 | Coming Soon</title>
+    <title>KUET ECE | 1-2 Hub</title>
     <meta name="description" content="A centralized collection of study materials for KUET Electronics and Communication Engineering.">
     <meta property="og:title" content="KUET ECE Materials Hub">
     <meta property="og:description" content="Access lecture notes, books, and question banks for KUET ECE.">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#3b82f6">
-    <link rel="icon" href="../assets/logo.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
@@ -46,24 +46,121 @@
         </nav>
     </header>
 
-    <main class="center-main">
-        <div class="coming-soon-page">
-            <i class="fa-solid fa-compass-drafting coming-soon-icon"></i>
-            <h2>Semester 1-2</h2>
-            <p>Materials for this semester will be uploaded soon.</p>
-            <a href="../index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
-        </div>
+    <main>
+        <section class="hero">
+            <div class="user-badge"><i class="fa-solid fa-user-graduate"></i> Batch 2k24</div>
+            <h1>Academic <span class="highlight">Resources</span> Hub</h1>
+            <p>Access all detailed lecture notes, books, and question banks for 1st Year 2nd Semester in one organized space.</p>
+        </section>
+
+        <section class="subject-grid">
+            <!-- ECE 1205 -->
+            <div class="card" onclick="openViewer('ECE 1205 - Science of Engineering Materials', 'ece1205')">
+                <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
+                <h3>ECE 1205</h3>
+                <p>Science of Engineering Materials</p>
+                <div class="tags">
+                    <span class="tag">Magnetic Properties</span>
+                    <span class="tag">Semiconductors</span>
+                    <span class="tag">Optical Properties</span>
+                </div>
+            </div>
+
+            <!-- ECE 1209 -->
+            <div class="card" onclick="openViewer('ECE 1209 - Analog Electronics - I', 'ece1209')">
+                <div class="card-icon"><i class="fa-solid fa-wave-square"></i></div>
+                <h3>ECE 1209</h3>
+                <p>Analog Electronics - I</p>
+                <div class="tags">
+                    <span class="tag">BJTs</span>
+                    <span class="tag">FETs</span>
+                    <span class="tag">Multistage Amplifiers</span>
+                    <span class="tag">Lab: ECE 1210</span>
+                </div>
+            </div>
+
+            <!-- CH 1209 -->
+            <div class="card" onclick="openViewer('CH 1209 - Chemistry', 'ch1209')">
+                <div class="card-icon"><i class="fa-solid fa-flask"></i></div>
+                <h3>CH 1209</h3>
+                <p>Chemistry</p>
+                <div class="tags">
+                    <span class="tag">Spectroscopy</span>
+                    <span class="tag">Polymers</span>
+                    <span class="tag">Electrochemistry</span>
+                    <span class="tag">Lab: CH 1210</span>
+                </div>
+            </div>
+
+            <!-- MATH 1209 -->
+            <div class="card" onclick="openViewer('MATH 1209 - Co-ordinate Geometry and Differential Equations', 'math1209')">
+                <div class="card-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+                <h3>MATH 1209</h3>
+                <p>Co-ordinate Geometry and Diff. Eq.</p>
+                <div class="tags">
+                    <span class="tag">3D Geometry</span>
+                    <span class="tag">Ordinary Differential Equations</span>
+                    <span class="tag">Partial Differential Equations</span>
+                </div>
+            </div>
+
+            <!-- CSE 1209 -->
+            <div class="card" onclick="openViewer('CSE 1209 - Computer Fundamentals and Programming', 'cse1209')">
+                <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                <h3>CSE 1209</h3>
+                <p>Computer Fundamentals and Programming</p>
+                <div class="tags">
+                    <span class="tag">Computer Fundamentals</span>
+                    <span class="tag">C Programming</span>
+                    <span class="tag">Lab: CSE 1210</span>
+                </div>
+            </div>
+
+            <!-- HUM 1210 -->
+            <div class="card" onclick="openViewer('HUM 1210 - Technical English Laboratory', 'hum1210')">
+                <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+                <h3>HUM 1210</h3>
+                <p>Technical English Laboratory</p>
+                <div class="tags">
+                    <span class="tag">Speaking</span>
+                    <span class="tag">Listening</span>
+                    <span class="tag">Reading</span>
+                    <span class="tag">Writing</span>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <div class="resource-viewer" id="viewerModal">
+        <div class="viewer-content">
+            <div class="viewer-header">
+                <h2 id="modalTitle">Subject Name</h2>
+                <button class="close-btn" onclick="closeViewer()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="viewer-tabs">
+                <button class="tab-btn active" id="notesBtn" onclick="switchTab('notes')">Lecture Notes</button>
+                <button class="tab-btn" id="booksBtn" onclick="switchTab('books')">Books</button>
+                <button class="tab-btn" onclick="switchTab('questions')">Question Bank</button>
+                <button class="tab-btn" id="slidesBtn" onclick="switchTab('slides')">Slides</button>
+                <button class="tab-btn" id="labManualsBtn" onclick="switchTab('labManuals')">Lab Manuals</button>
+                <button class="tab-btn" id="writingTabBtn" onclick="switchTab('writing')">Writing Part</button>
+                <button class="tab-btn" id="labTabBtn" onclick="switchTab('labs')">Labs (1210)</button>
+            </div>
+            <iframe id="driveFrame" class="drive-frame" src="about:blank"></iframe>
+            
+        </div>
+    </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
                 <i class="fa-solid fa-microchip"></i>
-                <span>KUET ECE Materials Hub</span>
+                <span>KUET ECE</span>
             </div>
             
             <div class="footer-links">
-                <p>A Complete Repository</p>
+                <p>Built for Batch 2k25</p>
                 <span class="separator"></span>
                 <p>Designed by <a href="https://facebook.com/kankonnil" target="_blank" class="designer-link">Kankon Mondal <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
             </div>
@@ -74,7 +171,7 @@
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <script src="../js/script-1-2.js"></script>
     <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" aria-label="Scroll to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
